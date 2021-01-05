@@ -27,12 +27,6 @@ class User_model extends CI_Model
             ],
 
             [
-                'field' => 'user_password',
-                'label' => 'User_password',
-                'rules' => 'required'
-            ],
-
-            [
                 'field' => 'user_level',
                 'label' => 'User_level',
                 'rules' => 'required'
@@ -71,6 +65,7 @@ class User_model extends CI_Model
     public function update()
     {
         $post = $this->input->post();
+        $this->id = $post["user_id"];
         $this->user_name = $post["user_name"];
         $this->user_email = $post["user_email"];
         $this->user_password = $post["user_password"];
@@ -84,18 +79,18 @@ class User_model extends CI_Model
         return $this->db->delete($this->_table, array("user_id" => $user_id));
     }
 
-    function create_member()
-    {
-        $new_member_insert_data = array(
-            'username' => $this->input->post("username"),
-            'password' => md5($this->input->post("password")),
-            'email'    => $this->input->post("email")
-        );
+    // function create_member()
+    // {
+    //     $new_member_insert_data = array(
+    //         'username' => $this->input->post("username"),
+    //         'password' => md5($this->input->post("password")),
+    //         'email'    => $this->input->post("email")
+    //     );
 
-        $insert = $this->db->insert("user", $new_member_insert_data);
+    //     $insert = $this->db->insert("user", $new_member_insert_data);
 
-        return true;
-    }
+    //     return true;
+    // }
 
     // get data with limit and search
     // function get_limit_data($limit, $start = 0, $q = NULL) {

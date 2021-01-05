@@ -40,7 +40,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/charts/flot.html" class="nav-link">
+              <a href="<?php echo base_url('admin/users/add'); ?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Add Pegawai</p>
               </a>
@@ -48,6 +48,32 @@
           </ul>
         </li>
         <!-- End Sidebar Pegawai -->
+
+        <!-- Sidebar RFID -->
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-chart-user"></i>
+            <p>
+              RFID
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?php echo base_url('admin/rfids'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>List RFID</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url('admin/rfids/add'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Add RFID</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Sidebar RFID -->
 
         <li class="nav-item">
           <a href="<?php echo base_url('login/logout'); ?>" class="nav-link">

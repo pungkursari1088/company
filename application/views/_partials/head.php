@@ -19,3 +19,6 @@
 <!-- DataTables -->
 <link rel="stylesheet" href="<?php echo base_url('assets/css/table/dataTables.bootstrap4.min.css'); ?>">
 <link rel="stylesheet" href="<?php echo base_url('assets/css/table/bootstrap.css'); ?>">
+
+<!-- Select style -->
+<link rel="stylesheet" href="<?php echo base_url('assets/css/select.css'); ?>">

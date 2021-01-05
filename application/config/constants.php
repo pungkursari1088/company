@@ -91,4 +91,4 @@ defined('EXIT__AUTO_MAX')      or define('EXIT__AUTO_MAX', 125); // highest auto
 |
 */
 define('SITE_NAME', 'COMPANY_WEBSITE');
-define('VERSION', 1.0);
+define('VERSION', '1.0');

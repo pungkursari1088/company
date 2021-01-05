@@ -1,0 +1,12 @@
+
+.select {
+	display: grid;
+  min-width: 15ch;
+  max-width: 100ch;
+  border-radius: 0.25em;
+
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+
+  }

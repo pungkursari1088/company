@@ -8,6 +8,9 @@
 <body class="hold-transition sidebar-mini">
     <?php $this->load->view("_partials/sidebar") ?>
     <?php $this->load->view("_partials/navbar") ?>
+    <div>
+        EMPLOYEE
+    </div>
 </body>
 
 <!-- Sticky Footer -->
