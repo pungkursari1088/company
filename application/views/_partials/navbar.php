@@ -3,7 +3,7 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
-      <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link bg-info rounded dropdown-toggle" href="#" id="navbarVersionDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           v3.0
         </a>
@@ -13,7 +13,7 @@
           <a class="dropdown-item" href="https://adminlte.io/docs/2.4/installation">v2.4</a>
           <a class="dropdown-item" href="https://adminlte.io/themes/AdminLTE/documentation/index.html"><= v2.3</a>
         </div>
-      </li>
+      </li> -->
     </ul>
 
     <ul class="navbar-nav ml-auto">
@@ -33,4 +33,4 @@
         </div>
       </div>
     </form> -->
-    </nav>
+  </nav>
