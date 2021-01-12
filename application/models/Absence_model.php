@@ -27,6 +27,17 @@ class Absence_model extends CI_Model
         return $this->db->get_where($this->_table, ["id" => $id])->row();
     }
 
+    public function getSumById($user_id)
+    {
+        return $this->db->select('SUM(work_hours) AS work_hours,
+        SUM(overtime_hours) AS overtime_hours,
+        SUM(penalty_hours) AS penalty_hours')
+            ->where('user_id', $user_id)
+            ->where('year(entry_hour)', date('Y'))
+            ->where('month(entry_hour)', date('m'))
+            ->get('absences')->row();
+    }
+
     public function saveEntryHour($user_id = NULL)
     {
         $now = date("Y-m-d H:i:s");

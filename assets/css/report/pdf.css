@@ -1,0 +1,85 @@
+/* body {
+  background: #f0f0f0;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  height: 100%;
+} */
+
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:200,300,400,600,700");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #444;
+} */
+
+/* #payslip {
+  width: calc(8.5in - 80px);
+  height: calc(11in - 60px);
+  border: 2px solid #444;
+  padding: 30px 40px;
+} */
+
+/* #title {
+  margin-bottom: 20px;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+#rate {
+  font-weight: 400;
+  width: 80px;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: medium;
+  text-align: left;
+}
+
+#label {
+  font-size: medium;
+  font-weight: 700;
+  text-align: left;
+  width: 50%;
+}
+
+#amount {
+  font-size: medium;
+  font-weight: 700;
+  width: 100%;
+  text-align: right;
+}
+
+.details {
+  display: grid;
+}
+
+.scope {
+  border-top: 2px solid #ccc;
+}
+
+.entry {
+  display: flex;
+}
+
+.payment {
+  margin-top: 10px;
+  display: flex;
+}
+
+.float-left {
+  width: 50%;
+  font-size: medium;
+  float: left;
+}
+.float-center {
+  font-size: medium;
+  float: left;
+  width: auto;
+}
+.float-right {
+  font-size: medium;
+  float: left;
+  padding-left: 10px;
+  width: auto;
+} */
