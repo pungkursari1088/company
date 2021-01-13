@@ -37,7 +37,7 @@ class Login extends CI_Controller
 
         // access login for staff
       } elseif ($level === '2') {
-        redirect('employee/welcome');
+        redirect('employee/overview');
 
         // access login for author
       } else {

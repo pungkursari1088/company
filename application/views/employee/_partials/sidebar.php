@@ -58,13 +58,6 @@
         </li>
 
         <li class="nav-item">
-          <a href="<?php echo base_url('employee/calendar'); ?>" class="nav-link">
-            <i class="nav-icon fas fa-calender"></i>
-            <p class="text">Kalender</p>
-          </a>
-        </li>
-
-        <li class="nav-item">
           <a href="<?php echo base_url('login/logout'); ?>" class="nav-link">
             <i class="nav-icon far fa-circle text-danger"></i>
             <p class="text">Log Out</p>

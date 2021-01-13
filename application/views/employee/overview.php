@@ -13,6 +13,23 @@
             font-size: 16pt;
             font-weight: bold;
         }
+
+        .card-title {
+            font-size: 20pt;
+            font-weight: bold;
+        }
+
+        .head-news {
+            font-size: 30pt;
+            font-weight: bold;
+        }
+
+        .card-custom {
+            margin-bottom: 15px;
+            overflow: hidden;
+            min-height: 200px;
+            box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+        }
     </style>
 </head>
 
@@ -27,24 +44,27 @@
         <!-- Main content -->
         <section class="content-wrapper">
 
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Overview</h1>
-                        </div>
-
-                    </div>
-                </div><!-- /.container-fluid -->
-            </section>
-
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-9 p-4">
+                        <label class="head-news">Portal Berita</label>
                         <div>
-                            <?php echo '<pre>' . var_export($results, true) . '</pre>'; ?>
+                            <?php foreach ($news as $new) : ?>
+                                <div class="card card-custom bg-white border-white border-0">
+                                    <div class="card-body">
+                                        <h3 class="card-title"><?php echo $new->title ?></h3>
+                                        <p class="card-text"><?php echo $new->description ?></p>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
+                        <div class="row">
+                            <div class="col center">
+                                <!--Tampilkan pagination-->
+                                <?php echo $links; ?>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="col-md-3">
                         <div id="calendar"></div>
@@ -54,6 +74,7 @@
             <!-- /.container-fluid -->
         </section>
         <!-- /.content -->
+
 
         <!-- Sticky Footer -->
         <?php $this->load->view("_partials/foot") ?>

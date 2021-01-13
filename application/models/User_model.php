@@ -65,7 +65,7 @@ class User_model extends CI_Model
     public function update()
     {
         $post = $this->input->post();
-        $this->id = $post["user_id"];
+        $this->user_id = $post["user_id"];
         $this->user_name = $post["user_name"];
         $this->user_email = $post["user_email"];
         $this->user_password = $post["user_password"];

@@ -1,13 +1,12 @@
 <?php
-class Calendar_model extends CI_Model
+class News_model extends CI_Model
 {
-    private $_table = "calendar";
+    private $_table = "news";
+
     public $id;
     public $title;
     public $description;
-    public $start;
-    public $end;
-
+    public $created_at;
 
     public function rules()
     {
@@ -19,19 +18,27 @@ class Calendar_model extends CI_Model
             ],
 
             [
-                'field' => 'start',
-                'label' => 'Start',
-                'rules' => 'required'
-            ],
-
-            [
-                'field' => 'end',
-                'label' => 'End',
+                'field' => 'created_at',
+                'label' => 'Created_at',
                 'rules' => 'required'
             ]
 
         ];
     }
+
+    public function get_count()
+    {
+        return $this->db->count_all($this->_table);
+    }
+
+    public function get_news($limit, $start)
+    {
+        $this->db->limit($limit, $start);
+        $query = $this->db->get($this->_table);
+        return $query->result();
+    }
+
+
     public function getAll()
     {
         return $this->db->get($this->_table)->result();
@@ -47,8 +54,7 @@ class Calendar_model extends CI_Model
         $post = $this->input->post();
         $this->title = $post["title"];
         $this->description = $post["description"];
-        $this->start = $post["start"];
-        $this->end = $post["end"];
+        $this->created_at = $post["created_at"];
         $this->db->insert($this->_table, $this);
     }
 
@@ -57,8 +63,8 @@ class Calendar_model extends CI_Model
         $post = $this->input->post();
         $this->id = $post["id"];
         $this->title = $post["title"];
-        $this->start = $post["start"];
-        $this->end = $post["end"];
+        $this->description = $post["description"];
+        $this->created_at = $post["created_at"];
         $this->db->update($this->_table, $this, array('id' => $post['id']));
     }
 

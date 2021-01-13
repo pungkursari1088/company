@@ -11,10 +11,10 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="<?php echo base_url('assets/img/'); ?>user1-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+        <img src="<?php echo base_url('assets/img/'); ?>icon.png" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">Alexander Pierce</a>
+        <a href="#" class="d-block"><?php echo ($this->session->userdata('username')) ?></a>
       </div>
     </div>
 
@@ -74,6 +74,58 @@
           </ul>
         </li>
         <!-- End Sidebar RFID -->
+
+        <!-- Sidebar Calender -->
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-chart-user"></i>
+            <p>
+              Calender
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?php echo base_url('admin/calendar'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>List Kegiatan</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url('admin/calendar/add'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Add Kegiatan</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Sidebar Calendar -->
+
+        <!-- Sidebar New -->
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-chart-user"></i>
+            <p>
+              Berita
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?php echo base_url('admin/news'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>List Berita</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url('admin/news/add'); ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Add Berita</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Berita Calendar -->
 
         <li class="nav-item">
           <a href="<?php echo base_url('login/logout'); ?>" class="nav-link">
